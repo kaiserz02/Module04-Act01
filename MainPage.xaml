@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC_Module04_Activity01.MainPage"
+             xmlns:local="clr-namespace:PDC_Module04_Activity01">
+            
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36">
+                <Label.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </Frame>
+        <Frame>
+            
+            <Frame.GestureRecognizers>
+                <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop" />
+            </Frame.GestureRecognizers>
+        </Frame>
+        
+        <Entry Placeholder="Enter a system double">
+            <Entry.Behaviors>
+                <local:NumericValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+    </StackLayout>
+
+</ContentPage>
